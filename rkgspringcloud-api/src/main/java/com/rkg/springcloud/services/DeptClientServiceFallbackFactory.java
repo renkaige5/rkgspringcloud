@@ -1,6 +1,6 @@
-package com.rkg.services;
+package com.rkg.springcloud.services;
 
-import com.rkg.entities.Dept;
+import com.rkg.springcloud.entities.Dept;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package com.rkg.services;
+package com.rkg.springcloud.services;
 
-import com.rkg.entities.Dept;
+import com.rkg.springcloud.entities.Dept;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
