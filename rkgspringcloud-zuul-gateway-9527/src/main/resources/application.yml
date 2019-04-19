@@ -3,7 +3,7 @@ server:
  
 spring: 
   application:
-    name: microservicecloud-zuul-gateway
+    name: rkgspringcloud-zuul-gateway
  
 eureka: 
   client: 
@@ -11,20 +11,20 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  
   instance:
     instance-id: gateway-9527.com
-    prefer-ip-address: true 
+    prefer-ip-address: true
  
  
-zuul: 
-  #ignored-services: microservicecloud-dept
-  prefix: /atguigu
+zuul:
+# ignored-services: rkgspringcloud-dept  #忽略真实的服务名,多个可以使用*
   ignored-services: "*"
-  routes: 
-    mydept.serviceId: microservicecloud-dept
+  prefix: /rkg #设置统一的访问前缀http://192.168.221.1:9527/rkg/mydept/dept/get/1
+  routes:
+    mydept.serviceId: rkgspringcloud-dept #将真实的微服务名称映射为下面的mydept.path,例如将http://192.168.221.1:9527/rkgspringcloud-dept/dept/get/1映射为http://192.168.221.1:9527/mydept/dept/get/1
     mydept.path: /mydept/**
  
 info:
-  app.name: atguigu-microcloud
-  company.name: www.atguigu.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  app.name: rkgspringcloud
+  company.name: www.renkaige.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
 

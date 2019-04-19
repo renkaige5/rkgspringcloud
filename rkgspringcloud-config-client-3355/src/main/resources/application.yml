@@ -1,3 +1,3 @@
 spring:
   application:
-    name: microservicecloud-config-client
+    name: rkgspringcloud-config-client

@@ -33,7 +33,7 @@ eureka:
 
 
 info:
-  app.name: rkgspringcloud-provider-dept-8001
+  app.name: rkgspringcloud
   company.name: www.renkaige.com
   build.artifactId: ${project.artifactId}
   build.version: ${project.version}

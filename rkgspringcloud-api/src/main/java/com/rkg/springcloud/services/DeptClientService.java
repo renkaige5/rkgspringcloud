@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * 
- * @Description: 修改microservicecloud-api工程，根据已经有的DeptClientService接口
+ * @Description: 修改rkgspringcloud-api工程，根据已经有的DeptClientService接口
 
 新建
 
@@ -20,8 +20,8 @@ import java.util.List;
  * @author zzyy
  * @date 2018年4月21日
  */
-@FeignClient(value = "RKGSPRINGCLOUD-DEPT")
-//@FeignClient(value = "MICROSERVICECLOUD-DEPT",fallbackFactory=DeptClientServiceFallbackFactory.class)
+//@FeignClient(value = "RKGSPRINGCLOUD-DEPT")
+@FeignClient(value = "RKGSPRINGCLOUD-DEPT",fallbackFactory=DeptClientServiceFallbackFactory.class)
 public interface DeptClientService
 {
 	@RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
